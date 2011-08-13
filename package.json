@@ -1,0 +1,15 @@
+{"name": "ublog",
+ "version": "0.1.0",
+ "author": "Jed Parsons <jed@jedparsons.com>",
+
+ "description": "A smallish microblogging system",
+
+ "dependencies": {
+   "connect": "",
+   "express": "2.4.1",
+   "jade": ">= 0.0.1",
+   "socket.io": ">= 0.7",
+   "mongoose": ">= 1.0.0",
+   "redis": ""
+  }
+}

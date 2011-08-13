@@ -1,0 +1,43 @@
+#message-template(style='display: none')
+  strong {{ author }}
+  div {{ message }}
+  time {{ date }}
+
+#profile-template(style='display: none')
+  h2 {{ username }}
+
+  .recent-messages
+
+#header
+  //- Search 
+  #search
+    form(id='search-form', onsubmit='search(); return false;')
+      div Search:
+        input(id='query', type='text', size='60')
+
+#content
+  //- Textarea for the user to submit a new message
+  div What's happening?
+  form(id='message-form')
+    textarea(id='input')
+    input(id='submit', type='submit', value='Send')
+
+  #feed
+    //- Button to list number of new messages 
+    #pending(onclick='showPending(); return false;')
+
+    //- Stack of messages we're reading
+    #messages 
+
+#profile
+
+script(src='/socket.io/socket.io.js')
+script(src='/javascripts/jquery-1.4.2.js')
+script(src='/javascripts/underscore.js')
+script(src='/javascripts/backbone.js')
+script(src='/javascripts/ublog-client.js')
+script
+  var app = new Application;
+  var appView = new ApplicationView({model:app});
+
+
